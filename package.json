@@ -28,6 +28,7 @@
   "activationEvents": [
     "onLanguage:java",
     "onLanguage:javascript",
+    "onLanguage:bsl",
     "onLanguage:javascriptreact",
     "onLanguage:typescript",
     "onLanguage:typescriptreact",

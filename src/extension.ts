@@ -29,6 +29,7 @@ let currentConfig: VSCode.WorkspaceConfiguration;
 const DOCUMENT_SELECTOR = [
   { scheme: 'file', language: 'java' },
   { scheme: 'file', language: 'javascript' },
+  { scheme: 'file', language: 'bsl'},
   { scheme: 'file', language: 'javascriptreact' },
   { scheme: 'file', language: 'php' },
   { scheme: 'file', language: 'python' },
@@ -128,6 +129,7 @@ function languageServerCommand(
   params.push('-jar', serverJar, `${port}`);
   params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'sonarjava.jar')));
   params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'sonarjs.jar')));
+  params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'bsl.jar')));
   params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'sonarphp.jar')));
   params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'sonarpython.jar')));
   params.push(toUrl(Path.resolve(context.extensionPath, 'analyzers', 'sonarhtml.jar')));
